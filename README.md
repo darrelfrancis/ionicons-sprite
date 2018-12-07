@@ -14,9 +14,7 @@ topic,so this one will be short.
 
 ### • What?
 
-Icon fonts suck on so many levels. So this is my two cents on making life with
-SVGs and popular ionicon font a little bit easier. Inline only symbols that you
-need and forget about additional requests, icon flickering and other stuff.
+Icon fonts suck on so many levels. So this is my two cents on making life a little bit easier, using SVGs and the popular Ionicon icon set. Include only the symbols you need, and forget about additional requests, icon flickering and other stuff.
 
 ### • Why?
 
@@ -36,9 +34,9 @@ need and forget about additional requests, icon flickering and other stuff.
 
 ### • How?
 
-Firstly, you need to add to your page inline `<svg>` with `<defs>` tag in it (it
+Firstly, add to your page an inline `<svg>` with a `<defs>` tag in it (it
 just means that you are defining stuff to use later) which will contain
-all definitions. Each `<symbol>` tag will have a unique ID, and will wrap all
+all the definitions. Each `<symbol>` tag will have a unique ID, and will wrap all
 the paths and whatnot thus forming an icon.
 
 ```html
@@ -57,12 +55,11 @@ the paths and whatnot thus forming an icon.
 </svg>
 ```
 
-You can get symbols with example for all icons by clicking on them [on demo
-site](https://rastasheep.github.io/ionicons-sprite), or finding them in sprite
+Choose the icons you want from the [demo site](https://rastasheep.github.io/ionicons-sprite), or find them in the sprite
 file in [the
-repo](https://github.com/rastasheep/ionicons-sprite/blob/master/sprite.svg).
+repo](https://github.com/rastasheep/ionicons-sprite/blob/master/sprite.svg). You can have all of the symbols, if you like (about 0.5MB).
 
-When you add all desired icons you can use them wherever, for example:
+Once you have added all you desired icons, you can display them anywhere in your HTML like this:
 
 ```html
 <svg class="ion ion-wand">
@@ -70,9 +67,7 @@ When you add all desired icons you can use them wherever, for example:
 </svg>
 ```
 
-As this is plain html, you have the ability to style them with CSS. For that
-purpose you can use class names added to SVGs.  Note that the icon will be
-enormous (100% wide) if you don't specify it's dimensions.
+You must set the desired size when displaying the icon, otherwise it will be enormous (100% wide). As this is just HTML, you can style it with CSS. I suggest you do this with two class names added to SVGs: one (e.g. "ion") for all the icons generically, and one (in this example, "ion-wand") for the specific icon.  The generic class sets the size to be a reasonable size, and the stroke styling etc. The individual icon class can be used for particular icons that need to be a special size or color.
 
 ```css
 /* Example icon styling */
